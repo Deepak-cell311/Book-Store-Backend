@@ -20,9 +20,9 @@ app.use(cors())
 app.use(bodyParser.json())
 
 // Database connection 
-const MongoDB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/react-native-project';
+const MongoDB_URI = process.env.MONGODB_URI;
 mongoose.connect(MongoDB_URI).then(() => {
-    console.log(`MongoDB connected successfully ${MongoDB_URI}`);
+    console.log(`Database Connected Successfully`);
 }).catch((error) => {
     console.error('MongoDB connection error:', error.message);
 });
